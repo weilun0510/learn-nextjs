@@ -1,8 +1,16 @@
-// import { type ReactElement } from 'react';
-// import ProjectLayout from '../layouts/project/index';
+'use client';
+
+import { useProjectStore } from 'src/app/stores/project-store-provider';
 
 const Edit = () => {
-  return <div>12</div>;
+  const { currentStep } = useProjectStore((state) => state);
+
+  return (
+    <div>
+      <div>project root page</div>
+      <div>{currentStep}</div>
+    </div>
+  );
 };
 
 // Edit.getLayout = function getLayout(page: ReactElement) {

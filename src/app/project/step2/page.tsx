@@ -1,5 +1,16 @@
+'use client';
+
+import { useProjectStore } from 'src/app/stores/project-store-provider';
+
 const Step2 = () => {
-  return <div>Step2</div>;
+  const { currentStep } = useProjectStore((state) => state);
+
+  return (
+    <div>
+      <div>project step2 page</div>
+      <div>{currentStep}</div>
+    </div>
+  );
 };
 
 // Step2.getLayout = function getLayout(page: ReactElement) {
