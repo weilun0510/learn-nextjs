@@ -1,5 +1,6 @@
 // app/styles/[styleId]/page.tsx
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 
 export async function generateStaticParams() {
   const res = await fetch(
@@ -32,7 +33,7 @@ export default async function StylePage({
   return (
     <div>
       <h1>{style.styleName}</h1>
-      <img src={style.styleCover} alt={style.styleName} />
+      <Image src={style.styleCover} alt={style.styleName} />
     </div>
   );
 }
