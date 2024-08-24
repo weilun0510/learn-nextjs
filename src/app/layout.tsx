@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-import ThemeToggle from 'src/app/components/ThemeToggle';
-const inter = Inter({ subsets: ['latin'] });
+
+import { inter } from 'src/app/ui/fonts';
+import 'src/app/ui/global.css';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,11 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {/* <ThemeToggle /> */}
-
-        {children}
-      </body>
+      <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   );
 }
