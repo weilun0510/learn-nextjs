@@ -1,6 +1,6 @@
 'use client';
 
-import { useProjectStore } from 'src/app/stores/project-store-provider';
+import { useProjectStore } from '@/app/stores/project-store-provider';
 
 const Edit = () => {
   const { currentStep } = useProjectStore((state) => state);
