@@ -91,6 +91,10 @@ export async function fetchFilteredInvoices(
 ) {
   const offset = (currentPage - 1) * ITEMS_PER_PAGE;
 
+  // SQL 解释
+  // WHERE customers.name ILIKE ${`%${query}%`}
+  // 在 customers 表中，查询 name 字段包含用户输入的 query 值的记录，不区分大小写
+
   try {
     const invoices = await sql<InvoicesTable>`
       SELECT
