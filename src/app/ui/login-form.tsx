@@ -7,7 +7,8 @@ import {
   ExclamationCircleIcon,
 } from '@heroicons/react/24/outline';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
-import { Button } from './button';
+// import { Button } from './button';
+import { Button } from '@/components/ui/button';
 // import { useActionState } from 'react';
 import { authenticate } from '@/app/lib/actions';
 import { useState } from 'react';
@@ -27,7 +28,7 @@ export default function LoginForm() {
 
   return (
     <form className="space-y-3" action={formaction}>
-      <div className="flex-1 rounded-lg bg-gray-50 px-6 pb-4 pt-8">
+      <div className="flex-1 rounded-lg bg-card px-6 pb-4 pt-8 ">
         <h1 className={`${lusitana.className} mb-3 text-2xl`}>
           Please log in to continue.
         </h1>
@@ -73,7 +74,7 @@ export default function LoginForm() {
           </div>
         </div>
         {/* <Button className="mt-4 w-full" aria-disabled={isPending}> */}
-        <Button className="mt-4 w-full">
+        <Button className="mt-4 w-full" variant="outline">
           Log in <ArrowRightIcon className="ml-auto h-5 w-5 text-gray-50" />
         </Button>
         <div
